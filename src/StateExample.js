@@ -5,6 +5,10 @@ export default class StateExample extends React.PureComponent {
     this.state = { count: 0 };
     this.updateCount = this.updateCount.bind(this);
   }
+  componentWillMount() {
+    var countValue = this.state.count;
+    console.log('countvalue::' + countValue);
+  }
   updateCount() {
     this.setState(
       {
