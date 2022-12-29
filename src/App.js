@@ -3,6 +3,7 @@ import './style.css';
 import City from './City';
 import StateExample from './StateExample';
 import Child from './Child';
+import AppRender from './AppRender';
 export default class App extends React.Component {
   state = {
     counter: 0,
@@ -23,6 +24,7 @@ export default class App extends React.Component {
 
         <City />
         <StateExample />
+        <AppRender />
       </div>
     );
   }

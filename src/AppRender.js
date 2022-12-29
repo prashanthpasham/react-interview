@@ -1,5 +1,5 @@
 import React from 'react';
-export class AppRender extends React.PureComponent {
+export default class AppRender extends React.PureComponent {
   render() {
     return React.createElement(
       'div',
