@@ -20,6 +20,7 @@ export default class StateExample extends React.PureComponent {
     console.log('render called count state is ' + this.state.count);
     return (
       <div>
+        <h3>Count value : {this.state.count}</h3>
         <button onClick={() => this.updateCount()}>Update Count</button>
       </div>
     );
