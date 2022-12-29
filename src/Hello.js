@@ -1,6 +1,17 @@
 import React from 'react';
 export default class Hello extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'Guest!!!' };
+  }
+  getName() {
+    return 'Guest';
+  }
+  getWelcomeMessage() {
+    return 'Welcome';
+  }
   render() {
-    return <h1>Hello</h1>;
+    var message = this.getWelcomeMessage() + ' ' + this.getName();
+    return <h1>{message}</h1>;
   }
 }
