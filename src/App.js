@@ -5,23 +5,39 @@ import StateExample from './StateExample';
 import Child from './Child';
 import AppRender from './AppRender';
 import Hello from './Hello';
+import Approach from './Approach';
 export default class App extends React.Component {
-  state = {
-    counter: 0,
-  };
+  constructor() {
+    super();
+    this.state = {
+      counter: 0,
+      x: {
+        a: 1,
+        b: 200,
+      },
+    };
+  }
   render() {
     return (
       <div>
+        <Approach />
         <Hello name="World" />
 
         <button
           onClick={() => {
-            this.setState({ counter: this.state.counter + 1 });
+            const obj = this.state.x;
+            obj.a = 2;
+            obj.a++;
+            this.setState({ counter: this.state.counter + 1, x: obj });
           }}
         >
           Increment
         </button>
-        <Child value={this.state.counter} />
+        <Child
+          key={this.state.counter}
+          value={this.state.counter}
+          x={this.state.x}
+        />
 
         <City />
         <StateExample />
