@@ -4,6 +4,7 @@ import City from './City';
 import StateExample from './StateExample';
 import Child from './Child';
 import AppRender from './AppRender';
+import Hello from './Hello';
 export default class App extends React.Component {
   state = {
     counter: 0,
@@ -11,7 +12,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello StackBlitz!</h1>
+        <Hello name="World" />
 
         <button
           onClick={() => {
